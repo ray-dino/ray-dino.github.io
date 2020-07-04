@@ -1,0 +1,10 @@
+depends: eq.api,com.eqela.libio,com.eqela.libos,com.eqela.libguiengine,com.eqela.libgui,com.eqela.libspriteengine,com.eqela.libspriteengine
+moduletype: customguiapplication
+platform: html
+url: 
+license: 
+copyright: 
+version: 20140902
+description: 
+displayname: Game Scene Tutorial
+id: net.raydino.gamescene

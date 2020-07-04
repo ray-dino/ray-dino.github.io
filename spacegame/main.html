@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<title>Game Scene Tutorial</title>
+<style>body { overflow: hidden; margin: 0px; padding: 0px; }</style>
+<script src="eq.api.js"></script>
+<script src="com.eqela.libio.js"></script>
+<script src="com.eqela.libstringutil.js"></script>
+<script src="com.eqela.libos.js"></script>
+<script src="com.eqela.libbackgroundtask.js"></script>
+<script src="com.eqela.libgui.js"></script>
+<script src="com.eqela.libvg.js"></script>
+<script src="com.eqela.libhtml5canvas.js"></script>
+<script src="com.eqela.libhtml5gui.js"></script>
+<script src="com.eqela.libguiengine.js"></script>
+<script src="com.eqela.libimage.js"></script>
+<script src="com.eqela.libspriteengine.js"></script>
+<script src="net.raydino.gamescene.js"></script>
+<script>
+window.onload = function() {
+	eq.api.Application.initialize(eq.api.StringStatic.for_strptr("net.raydino.gamescene"), eq.api.StringStatic.for_strptr("Game Scene Tutorial"), eq.api.StringStatic.for_strptr("20140902"), eq.api.StringStatic.for_strptr(""), eq.api.StringStatic.for_strptr(""), eq.api.StringStatic.for_strptr(""), eq.api.StringStatic.for_strptr(""));
+	com.eqela.libguiengine.GUIEngine.initialize();
+	var mo = new net.raydino.gamescene.Main();
+	var fr = new com.eqela.libhtml5gui.HTML5Frame();
+	fr.load_icon_js('beam1');
+	fr.load_icon_js('beam2');
+	fr.load_icon_js('enemy1');
+	fr.load_icon_js('eqela_splash_logo');
+	fr.load_icon_js('explosion0');
+	fr.load_icon_js('explosion1');
+	fr.load_icon_js('purple_space');
+	fr.load_icon_js('rocket');
+	fr.load_icon_js('space_bg');
+	fr.load_icon_js('start_btn');
+	fr.load_icon_js('title');
+	fr.initialize(mo);
+};
+</script>
+</head>
+<body>
+</body>
+</html>

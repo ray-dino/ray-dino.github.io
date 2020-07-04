@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                width: 100%;
+                border: 0;
+                margin:0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #000000;
+                #background-image: url("galaxy.png");
+                #background-size: 100% 100%;
+            }
+
+            #game-frame {
+                border: 0;
+                margin:0 auto;
+                padding: 0;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe id='game-frame' src='main.html'>
+        </iframe>
+
+        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript">
+            (function($, window, document) {
+                $(function() {
+                    // DOM is ready
+                    var winHeight = $(window).height(),
+                        winWidth = $(window).width(),
+                        idealWidth = winHeight * 0.8;
+                    
+                    $('#game-frame').css('height', winHeight+'px');
+                    if (idealWidth > winWidth) {
+                        $('#game-frame').css('width', winWidth+'px');
+                    }
+                    else {
+                        $('#game-frame').css('width', idealWidth+'px');
+                    }
+
+                    $('#game-frame').focus();
+                });
+            }(window.jQuery, window, document));
+        </script>
+    </body>
+</html>
